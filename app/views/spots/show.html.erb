@@ -5,5 +5,13 @@
   <%= @spot.name %>
 </p>
 
+<h3>Będzie tu dzisiaj:</h3>
+
+<% @comments.each do |comment| %>
+  <%= render comment %>
+<% end %>
+
+<%= render partial: 'comments/form' %>
+
 <%= link_to 'Edit', edit_spot_path(@spot) %> |
 <%= link_to 'Back', spots_path %>

@@ -10,6 +10,10 @@ class SpotsController < ApplicationController
   # GET /spots/1
   # GET /spots/1.json
   def show
+    @spot = Spot.find(params[:id])
+    @comments = @spot.comments
+    @comment = Comment.new
+    @comment.spot_id = @spot.id
   end
 
   # GET /spots/new

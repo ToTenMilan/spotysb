@@ -1,0 +1,18 @@
+<div>
+  <h5>Dopisz się:</h5>
+  <!-- comment form here -->
+  <%= form_for [@spot, @comment] do |f| %>
+    <ul>
+
+      <%= f.text_field :author, placeholder: "Your name here" %>
+    </ul>
+    <ul>
+
+      <%= f.text_area :body, placeholder: "Some message. when you will come? What you need? etc." %>
+    </ul>
+
+    <ul>
+      <%= f.submit "Submit" %>
+    </ul>
+  <% end %>
+</div>

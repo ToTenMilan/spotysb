@@ -2,8 +2,13 @@ require './config/boot'
 require './config/environment'
 require 'clockwork'
 
-module Clockwork
-  every(1.day, 'delete.comment', at: '15:02') {
-    Comment.destroy_all
-  }
-end
+
+  every(1.day, 'name', at: '18:28') do
+    Rake::Task['comment:destroy'].invoke
+  end
+
+
+  # every(1.day, 'delete.comment', at: '18:13') {
+  #   Comment.destroy_all
+  # }
+

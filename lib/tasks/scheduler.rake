@@ -1,7 +1,6 @@
 namespace :scheduler do
-  desc "This task is called by heroku scheduler add-on"
-  task :do_thing => :environment  do
-    puts "doing something in task"
-    puts "done"
+  desc 'Destroy all comments'
+  task destroy: :environment do
+    Comment.destroy_all
   end
 end

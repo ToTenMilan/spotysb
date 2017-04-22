@@ -14,5 +14,4 @@
 
 ### I2
 
-* Using [Clockwork](https://github.com/Rykian/clockwork) gem, I was able to automate comments removing every day at midnight. Problem is that, its doing the job only in development environment and only when `clockwork app/clock.rb` is running on terminal.
-* Need to figure out how to make it running nonstop in production, to automatically remove user notes(comments) at midnight. [This](http://tutorials.jumpstartlab.com/topics/systems/automation.html) may help.
+* Comments are now deleting automatically every day at midnight with rake task run in background on [heroku scheduler](https://devcenter.heroku.com/articles/scheduler) addon

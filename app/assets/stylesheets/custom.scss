@@ -1,0 +1,51 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+
+.spot {
+  // border: 1px solid black;
+  // margin: 1px 0;
+  padding: 0;
+  img {
+    width: 100%;
+    border: 1px;
+  }
+}
+
+#logo {
+  float: left;
+  margin-right: 16px;
+  font-size: 34px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 14px;
+  font-weight: 900;
+  &:hover {
+    color: #aaa;
+    text-decoration: none;
+    background: none;
+  }
+}
+
+.logo_text {
+  float: left;
+  margin-right: 14px;
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  padding-top: 21px;
+  font-weight: 900;
+  &:hover {
+    color: #aaa;
+    text-decoration: none;
+    background: none;
+    font-weight: 900;
+  }
+}
+
+// .image {
+//   width: 100%;
+
+// }

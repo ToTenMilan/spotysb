@@ -15,3 +15,7 @@
 ### I2
 
 * Comments are now deleting automatically every day at midnight with rake task run in background on [heroku scheduler](https://devcenter.heroku.com/articles/scheduler) addon
+
+### I3
+
+* Styling and responsiveness with bootstrap has been added, unnessesary links removed, but create/edit routes are still available to everyone.

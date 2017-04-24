@@ -1,17 +1,32 @@
-<%= image_tag "#{@spot.name}.jpg" %>
-<p id="notice"><%= notice %></p>
+<div class="show-view-image">
+  <%= image_tag "#{@spot.name}.jpg" %>
+</div>
 
-<% if @spot.comments.any? %>
-  <h3>Będzie tu dzisiaj:</h3>
-  <div id="comments">
-    <% @comments.each do |comment| %>
-      <%= render comment %>
-    <% end %>
-  </div>
-<% else %>
-  <h3>Jeszcze nikt się tu dziś nie zadeklarował</h3>
+<% if @comment.errors.any? %>
+  <p id="notice"><%= notice %></p>
 <% end %>
+
+<div id="comments">
+  <% if @spot.comments.any? %>
+    <h3 class="comments-header">Zostawione notki:</h3>
+
+    <table class="table-striped">
+      <% @comments.each do |comment| %>
+      <hr>
+      <tr>
+        <%= render comment %>
+      </tr>
+      <% end %>
+    </table>
+
+  <% else %>
+    <h3 class="comments-header">Nikt tu dziś nie jeździ</h3>
+  <% end %>
+  <%= link_to 'powrót', spots_path, class: "btn btn-primary button-back" %>
+</div>
 
 <%= render partial: 'comments/form' %>
 
-<%= link_to 'Back', spots_path %>
+
+
+

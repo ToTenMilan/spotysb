@@ -1,14 +1,36 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.spot {
-  // border: 1px solid black;
-  // margin: 1px 0;
-  padding: 0;
-  img {
-    width: 100%;
-    border: 1px;
+// general
+body {
+  background-color: #d9dbf1;
+  color: #416165;
+  font-family: verdana, arial, helvetica, sans-serif;
+  line-height: 18px;
+  width: 100%;
+}
+
+#notice {
+  margin: 0;
+  color: #fbfbff;
+  padding-left: 8px;
+  background: #b80c09;
+}
+
+// navbar
+.navbar-btn {
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 900;
+  &:hover {
+    color: #aaa;
+    text-decoration: none;
   }
+}
+
+.navbar-static-top {
+  margin-bottom: 0;
 }
 
 #logo {
@@ -27,31 +49,78 @@
   }
 }
 
-.logo_text {
-  float: left;
-  margin-right: 14px;
-  font-size: 14px;
-  color: #fff;
-  text-transform: uppercase;
-  padding-top: 21px;
-  font-weight: 900;
-  &:hover {
-    color: #aaa;
-    text-decoration: none;
-    background: none;
-    font-weight: 900;
+// posts/index.html.erb page
+.spot {
+  padding: 0;
+  img {
+    width: 100%;
+    border: 1px;
   }
+}
+
+// posts/show.html.erb - comments part
+.comments-header {
+  font-weight: 600;
+  padding: 8px;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  padding: 8px;
+}
+
+hr {
+  width: 250px;
+  color: #acb0bd;
+  padding: 0;
+  margin: 0;
+  position: left;
+}
+
+#comments {
+  background: #d0cdd7;
+}
+
+// comments/_form.html.erb
+.form-header {
+  font-weight: 600;
+  padding: 8px;
+  margin: 0;
+}
+
+.form {
+  padding: 8px;
+  background: #acb0bd;
+}
+
+// buttons
+.button-back {
+  padding-left: 8px;
+  padding-bottom: 8px;
+  margin-left: 8px;
+  margin-bottom: 8px
+}
+
+.btn-primary {
+  border: #d9dbf1;
+  background: #0b3948;
+  font-weight: 600;
+}
+
+// .show-view-image {
+//   width: 50%;
+//   margin: 0 auto;
+// }
+//
+
+// footer
+footer {
+  padding-left: 5%;
+  width: 100%;
+  background: #eee;
 }
 
 #github_link {
   font-weight: 600;
 }
-
-footer {
-  margin-left: 5%;
-  width: 100%;
-}
-// .image {
-//   width: 100%;
-
-// }

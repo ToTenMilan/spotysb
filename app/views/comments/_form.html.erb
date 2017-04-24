@@ -1,18 +1,22 @@
-<div>
-  <h5>Dopisz się:</h5>
+<div class="form">
+  <% if @spot.comments.any? %>
+    <h4 class="form-header">Dopisz się:</h4>
+  <% else %>
+    <h4 class="form-header">Bądź pierwszy:</h4>
+  <% end %>
   <!-- comment form here -->
   <%= form_for [@spot, @comment] do |f| %>
-    <ul>
 
-      <%= f.text_field :author, placeholder: "Your name here" %>
-    </ul>
-    <ul>
+    <div class="form-group">
+      <%= f.text_field :author, class: "form-control", placeholder: "Twoje imie" %>
+    </div>
 
-      <%= f.text_area :body, placeholder: "Some message. when you will come? What you need? etc." %>
-    </ul>
+    <div class="form-group">
+      <%= f.text_area :body, class: "form-control", rows: 3, placeholder: "Twoja wiadomość, np. o której będziesz? Czy coś od kogoś chcesz?" %>
+    </div>
 
-    <ul>
-      <%= f.submit "Submit" %>
-    </ul>
+      <%= f.submit "Akceptuj", class: "btn btn-primary" %>
+
   <% end %>
 </div>
+

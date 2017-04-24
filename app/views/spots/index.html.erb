@@ -1,12 +1,10 @@
-<p id="notice"><%= notice %></p>
+<% @spots.each do |spot| %>
+  <div class="col-md-4 spot">
 
-  <% @spots.each do |spot| %>
-    <div class="col-md-4 spot">
+      <%= link_to (image_tag "#{spot.name}.jpg"), spot %>
 
-        <%= link_to (image_tag "#{spot.name}.jpg"), spot %>
-
-    </div>
-  <% end %>
+  </div>
+<% end %>
 
 <br>
 

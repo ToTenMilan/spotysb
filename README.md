@@ -17,3 +17,5 @@
 * Validations has been added to comments, and UX on show page has been improved little bit, that means if no comments are left for a particular spot than user is informed about that
 
 * Footer partial has been added
+
+* Much of styling has been added to almost every part of the page. Ui and UX has also been improved in few places. It looks now little bit more professional

@@ -1,14 +1,16 @@
 <%= image_tag "#{@spot.name}.jpg" %>
 <p id="notice"><%= notice %></p>
 
-<h3>Będzie tu dzisiaj:</h3>
-
-<div id="comments">
-  <% @comments.each do |comment| %>
-    <%= render comment %>
-  <% end %>
-</div>
-
+<% if @spot.comments.any? %>
+  <h3>Będzie tu dzisiaj:</h3>
+  <div id="comments">
+    <% @comments.each do |comment| %>
+      <%= render comment %>
+    <% end %>
+  </div>
+<% else %>
+  <h3>Jeszcze nikt się tu dziś nie zadeklarował</h3>
+<% end %>
 
 <%= render partial: 'comments/form' %>
 

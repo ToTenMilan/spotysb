@@ -14,6 +14,7 @@ class SpotsController < ApplicationController
     @comments = @spot.comments
     @comment = Comment.new
     @comment.spot_id = @spot.id
+    @comment.save
   end
 
   # GET /spots/new

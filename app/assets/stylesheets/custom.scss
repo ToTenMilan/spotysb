@@ -1,8 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
-
 .spot {
   // border: 1px solid black;
   // margin: 1px 0;
@@ -45,6 +43,14 @@
   }
 }
 
+#github_link {
+  font-weight: 600;
+}
+
+footer {
+  margin-left: 5%;
+  width: 100%;
+}
 // .image {
 //   width: 100%;
 

@@ -7,15 +7,13 @@
 
 ## Dev diary
 
-### I1
-
 * Spots feature has been added
 * Comments under spots has been added. For now, I decided to not create `User` model. Logging in just to leave a super short message is not needed at the moment. Instead `Comment` model has `author` column.
 
-### I2
-
 * Comments are now deleting automatically every day at midnight with rake task run in background on [heroku scheduler](https://devcenter.heroku.com/articles/scheduler) addon
 
-### I3
-
 * Styling and responsiveness with bootstrap has been added, unnessesary links removed, but create/edit routes are still available to everyone.
+
+* Validations has been added to comments, and UX on show page has been improved little bit, that means if no comments are left for a particular spot than user is informed about that
+
+* Footer partial has been added

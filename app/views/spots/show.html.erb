@@ -1,31 +1,36 @@
-<div class="show-view-image">
+<div class="col-md-4 show-view-image">
   <%= image_tag "#{@spot.name}.jpg" %>
 </div>
 
-<% if @comment.errors.any? %>
-  <p id="notice"><%= notice %></p>
-<% end %>
-
-<div id="comments">
-  <% if @spot.comments.any? %>
-    <h3 class="comments-header">Zostawione notki:</h3>
-
-    <table class="table-striped">
-      <% @comments.each do |comment| %>
-      <hr>
-      <tr>
-        <%= render comment %>
-      </tr>
-      <% end %>
-    </table>
-
-  <% else %>
-    <h3 class="comments-header">Nikt tu dziś nie jeździ</h3>
+<div class="col-md-4 comments-section">
+  <% if @comment.errors.any? %>
+    <p id="notice"><%= notice %></p>
   <% end %>
-  <%= link_to 'powrót', spots_path, class: "btn btn-primary button-back" %>
+
+  <div id="comments">
+    <% if @spot.comments.any? %>
+      <h3 class="comments-header">Zostawione notki:</h3>
+
+      <table class="table-striped">
+        <% @comments.each do |comment| %>
+        <hr>
+        <tr>
+          <%= render comment %>
+        </tr>
+        <% end %>
+      </table>
+
+    <% else %>
+      <h3 class="comments-header">Nikt tu dziś nie jeździ</h3>
+    <% end %>
+    <%= link_to 'powrót', spots_path, class: "btn btn-primary button-back" %>
+  </div>
 </div>
 
-<%= render partial: 'comments/form' %>
+<div class="col-md-4 form-partial">
+  <%= render partial: 'comments/form' %>
+</div>
+
 
 
 

@@ -19,3 +19,5 @@
 * Footer partial has been added
 
 * Much of styling has been added to almost every part of the page. Ui and UX has also been improved in few places. It looks now little bit more professional
+
+* Show page modified to be responsive. Some CSS effects added at spots/index view

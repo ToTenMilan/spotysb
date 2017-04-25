@@ -10,11 +10,17 @@ body {
   width: 100%;
 }
 
-#notice {
+.notice {
   margin: 0;
   color: #fbfbff;
   padding-left: 8px;
   background: #b80c09;
+}
+
+.alert {
+  margin: 0;
+  border: 0;
+  padding: 0;
 }
 
 // navbar
@@ -138,6 +144,10 @@ hr {
   border: #d9dbf1;
   background: #0b3948;
   font-weight: 600;
+}
+
+.admin-btn {
+  color: #fca311;
 }
 
 // footer

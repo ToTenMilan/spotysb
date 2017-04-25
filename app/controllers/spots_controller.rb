@@ -1,5 +1,10 @@
 class SpotsController < ApplicationController
   before_action :set_spot, only: [:show, :edit, :update, :destroy]
+  # devise helper
+  #before_action :authenticate_user!
+
+  # uncomment if "Can't verify CSRF token authenticity"
+  # protect_from_forgery prepend: true
 
   # GET /spots
   # GET /spots.json

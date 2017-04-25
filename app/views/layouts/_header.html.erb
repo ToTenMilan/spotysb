@@ -4,6 +4,10 @@
     <%= link_to "Chodź na deske", 'javascript:naDeske()', class: "btn navbar-btn" %>
     <%= link_to "O co chodzi?", 'javascript:howItWorks()', class: "btn navbar-btn" %>
     <%= link_to "Beta", 'javascript:beta()', class: "btn navbar-btn" %>
+    <% if user_signed_in? %>
+      <%= link_to 'New Spot', new_spot_path, class: "btn navbar-btn admin-btn" %>
+      <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "btn navbar-btn admin-btn" %>
+    <% end %>
   </div>
 
 </header>

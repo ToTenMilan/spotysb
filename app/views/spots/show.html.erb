@@ -3,6 +3,7 @@
 </div>
 
 <div class="col-md-4 comments-section">
+
   <% if @comment.errors.any? %>
     <p class="notice"><%= notice %></p>
   <% end %>
@@ -23,6 +24,7 @@
     <% else %>
       <h3 class="comments-header">Nikt tu dziś nie jeździ</h3>
     <% end %>
+
     <%= link_to 'powrót', spots_path, class: "btn btn-primary button-back" %>
   </div>
 </div>

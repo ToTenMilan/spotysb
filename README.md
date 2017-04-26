@@ -21,3 +21,5 @@
 * Much of styling has been added to almost every part of the page. Ui and UX has also been improved in few places. It looks now little bit more professional
 
 * Show page modified to be responsive. Some CSS effects added at spots/index view
+
+* Devise gem has been added, and I've registered to be an admin. Then Devise's registerable module has been turned off so only I can log in and add new spots. That is temporary. In the long run, users should be able to log in and add their spots to some kind of "waiting room" to be accepted by the others and even add new cities
